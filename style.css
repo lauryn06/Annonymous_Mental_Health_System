@@ -9,4 +9,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url(join\ us_your\ health\ mentor.jpeg);
+      background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
 }
