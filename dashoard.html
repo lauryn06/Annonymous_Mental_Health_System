@@ -15,13 +15,13 @@
             <li><a href="#">Resources</a></li>
             <li><a href="#">Chat</a></li>
             <li><a href="#">Progress</a></li>
-            <li><a href="login.html">Logout</a></li>
+            <li><a href="login.html" id="logout">Logout</a></li>
         </ul>
     </nav>
 
     <!-- Welcome Section -->
     <header>
-        <h1 id="welcome">Welcome to Your Dashboard</h1>
+        <h1 id="welcome">Welcome!</h1>
         <p>Access support, resources, and anonymous chat to care for your mental wellness.</p>
     </header>
 
@@ -49,22 +49,19 @@
     </main>
 
     <script>
-        // Example JS for personalized welcome
+        // Get stored username
         const username = localStorage.getItem('username') || 'User';
         document.getElementById('welcome').textContent = `Welcome, ${username}!`;
 
-        // Placeholder JS functions for buttons
-        function startChat() {
-            alert("Chat feature coming soon!");
-        }
+        // Placeholder button actions
+        function startChat() { alert("Chat feature coming soon!"); }
+        function viewResources() { alert("Resources feature coming soon!"); }
+        function viewProgress() { alert("Progress Tracker coming soon!"); }
 
-        function viewResources() {
-            alert("Resources feature coming soon!");
-        }
-
-        function viewProgress() {
-            alert("Progress Tracker coming soon!");
-        }
+        // Clear localStorage on logout click
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('username');
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thandizo Mental Health - Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-toggle">
+            <button id="showLogin" class="active">Login</button>
+            <button id="showSignup">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <h1>Login</h1>
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="hidden">
+            <h1>Sign Up</h1>
+            <label for="signupUsername">Username</label>
+            <input type="text" id="signupUsername" placeholder="Enter your username" required>
+
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Enter your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        // Toggle forms
+        const showLoginBtn = document.getElementById('showLogin');
+        const showSignupBtn = document.getElementById('showSignup');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+
+        showLoginBtn.addEventListener('click', () => {
+            loginForm.classList.remove('hidden');
+            signupForm.classList.add('hidden');
+            showLoginBtn.classList.add('active');
+            showSignupBtn.classList.remove('active');
+        });
+
+        showSignupBtn.addEventListener('click', () => {
+            signupForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+            showSignupBtn.classList.add('active');
+            showLoginBtn.classList.remove('active');
+        });
+
+        // Login redirect (can store email for demo purposes)
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            localStorage.setItem('username', email.split('@')[0]); // store part of email as username
+            window.location.href = "dashboard.html";
+        });
+
+        // Signup redirect and store username
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('signupUsername').value;
+            localStorage.setItem('username', username);
+            window.location.href = "dashboard.html";
+        });
+    </script>
+</body>
+</html>
+
+
