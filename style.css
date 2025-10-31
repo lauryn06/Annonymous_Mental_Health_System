@@ -89,6 +89,69 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.progress-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    background: var(--card-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.progress-header {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.tracker-section {
+    margin: 20px 0;
+}
+
+.tracker-logs {
+    margin: 20px 0;
+}
+
+#mood-logs {
+    list-style: none;
+    padding: 0;
+}
+
+#mood-logs li {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: var(--secondary-color);
+    color: var(--card-color);
+}
+
+.mood-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.mood-form input, .mood-form select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.mood-form button {
+    background: var(--button-color);
+    color: var(--card-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mood-form button:hover {
+    background: var(--button-hover);
+}
 
 h1 {
     text-align: center;

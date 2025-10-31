@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thandizo Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="progress-container">
+        <header class="progress-header">
+            <h2>Your Progress</h2>
+            <p>Track your mood and activities anonymously</p>
+        </header>
+
+        <div class="tracker-section">
+            <canvas id="moodChart"></canvas>
+        </div>
+
+        <div class="tracker-logs">
+            <h3>Mood Logs</h3>
+            <ul id="mood-logs">
+                <!-- Mood entries will appear here -->
+            </ul>
+        </div>
+
+        <form id="mood-form" class="mood-form">
+            <input type="date" id="mood-date" required>
+            <select id="mood-value" required>
+                <option value="">Select Mood</option>
+                <option value="5">😊 Very Good</option>
+                <option value="4">🙂 Good</option>
+                <option value="3">😐 Neutral</option>
+                <option value="2">😔 Sad</option>
+                <option value="1">😢 Very Sad</option>
+            </select>
+            <button type="submit">Add Mood</button>
+        </form>
+    </div>
+
+    <script src="progress.js"></script>
+</body>
+</html>
