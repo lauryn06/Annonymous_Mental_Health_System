@@ -22,6 +22,64 @@ body {
     background-size: cover;
     color: var(--text-color);
 }
+.resources-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--card-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.resources-header {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.resources-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.resource-card {
+    background: var(--secondary-color);
+    color: var(--card-color);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+.resource-card h3 {
+    margin-top: 0;
+}
+
+.resource-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
 
 .container {
     max-width: 400px;
