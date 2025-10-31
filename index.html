@@ -3,42 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up - Thandizo Mental Health</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-     <h3>Thandizo Mental Health</h3>
-     <h4>Create Account</h4>
-  <form action="/submit_registration" method="post">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-    <label for="confirm_password">Confirm Password:</label><br>
-    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
 
-    <label for="dob">Date of Birth:</label><br>
-    <input type="date" id="dob" name="dob"><br><br>
+    <script>
+        // Redirect to dashboard on form submit
+        const signupForm = document.getElementById('signupForm');
 
-    <label for="gender">Gender:</label><br>
-    <select id="gender" name="gender">
-      <option value="">Select</option>
-      <option value="female">Female</option>
-      <option value="male">Male</option>
-      <option value="other">Other</option>
-      <option value="prefer_not_to_say">Prefer not to say</option>
-    </select><br><br>
-
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone"><br><br>
-
-    <input type="submit" value="Create Account">
-<h5>Arleady have an account.<a href="login.html">SignIn</a></h5>
-    </form>
-    <script src="script.js"></script>
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent actual form submission
+            window.location.href = "dashoard.html"; // redirect to dashboard
+        });
+    </script>
 </body>
 </html>
