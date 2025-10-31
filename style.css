@@ -62,6 +62,101 @@ form button {
     cursor: pointer;
     transition: background 0.3s;
 }
+:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #00C1D4;
+    --background-color: #F0F4F8;
+    --text-color: #333;
+    --card-color: #fff;
+    --button-color: var(--primary-color);
+    --button-hover: #574fd6;
+    --user-msg: #d1e7dd; /* you can adjust if needed */
+    --bot-msg: #f8d7da;  /* you can adjust if needed */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    background: var(--card-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--primary-color);
+    color: var(--card-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: var(--background-color);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background: var(--secondary-color);
+    color: var(--card-color);
+    align-self: flex-end;
+}
+
+.message.bot {
+    background: #f1f1f1;
+    color: var(--text-color);
+    align-self: flex-start;
+}
+
+.chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+.chat-form button {
+    border: none;
+    background: var(--button-color);
+    color: var(--card-color);
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-form button:hover {
+    background: var(--button-hover);
+}
 
 form button:hover {
     background-color: var(--button-hover);
