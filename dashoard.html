@@ -7,40 +7,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="logo">Thandizo</div>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="#">Chat</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#">Progress</a></li>
             <li><a href="login.html">Logout</a></li>
         </ul>
     </nav>
 
+    <!-- Welcome Section -->
     <header>
-        <h1>Welcome to Your Dashboard</h1>
-        <p>Access support, resources, and anonymous chat.</p>
+        <h1 id="welcome">Welcome to Your Dashboard</h1>
+        <p>Access support, resources, and anonymous chat to care for your mental wellness.</p>
     </header>
 
+    <!-- Feature Cards -->
     <main>
         <div class="cards">
             <div class="card">
-                <h2>Chat with a Counselor</h2>
-                <p>Start an anonymous conversation with a mental health professional.</p>
-                <button>Start Chat</button>
+                <h2>Anonymous Chat</h2>
+                <p>Start a confidential chat with a mental health counselor.</p>
+                <button onclick="startChat()">Start Chat</button>
             </div>
+
             <div class="card">
                 <h2>Resources</h2>
-                <p>Access mental health guides, tips, and educational material.</p>
-                <button>View Resources</button>
+                <p>Access mental health guides, articles, and tips.</p>
+                <button onclick="viewResources()">View Resources</button>
             </div>
+
             <div class="card">
-                <h2>Progress</h2>
+                <h2>Progress Tracker</h2>
                 <p>Track your mental wellness and journal your thoughts.</p>
-                <button>View Progress</button>
+                <button onclick="viewProgress()">View Progress</button>
             </div>
         </div>
     </main>
+
+    <script>
+        // Example JS for personalized welcome
+        const username = localStorage.getItem('username') || 'User';
+        document.getElementById('welcome').textContent = `Welcome, ${username}!`;
+
+        // Placeholder JS functions for buttons
+        function startChat() {
+            alert("Chat feature coming soon!");
+        }
+
+        function viewResources() {
+            alert("Resources feature coming soon!");
+        }
+
+        function viewProgress() {
+            alert("Progress Tracker coming soon!");
+        }
+    </script>
 </body>
 </html>
+
