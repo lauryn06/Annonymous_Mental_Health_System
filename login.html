@@ -67,7 +67,7 @@
             e.preventDefault();
             const email = document.getElementById('loginEmail').value;
             localStorage.setItem('username', email.split('@')[0]); // store part of email as username
-            window.location.href = "dashboard.html";
+            window.location.href = "dashoard.html";
         });
 
         // Signup redirect and store username
@@ -75,7 +75,7 @@
             e.preventDefault();
             const username = document.getElementById('signupUsername').value;
             localStorage.setItem('username', username);
-            window.location.href = "dashboard.html";
+            window.location.href = "dashoard.html";
         });
     </script>
 </body>
