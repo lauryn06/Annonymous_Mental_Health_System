@@ -54,9 +54,9 @@
         document.getElementById('welcome').textContent = `Welcome, ${username}!`;
 
         // Placeholder button actions
-        function startChat() { alert("Chat feature coming soon!"); }
-        function viewResources() { alert("Resources feature coming soon!"); }
-        function viewProgress() { alert("Progress Tracker coming soon!"); }
+        function startChat() {   window.location.href = "chat.html"; }
+        function viewResources() {   window.location.href = "resources.html"; }
+        function viewProgress() {   window.location.href = "progress.html"; }
 
         // Clear localStorage on logout click
         document.getElementById('logout').addEventListener('click', () => {
