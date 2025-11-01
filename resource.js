@@ -2,7 +2,7 @@ const resources = [
     {
         title: "Managing Stress",
         description: "Tips and techniques to manage daily stress effectively.",
-        link: "#"
+        link: "stress.html"
     },
     {
         title: "Dealing with Anxiety",
