@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thandizo — Stress / Depression Screening</title>
+  <link rel="stylesheet" href="stress.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Stress & Mood Check</h1>
+      <p class="subtitle">A short anonymous screening to reflect on how you've been feeling lately.</p>
+    </header>
+
+    <main class="card">
+      <form id="stress-form" aria-label="Stress screening form">
+        <p class="instructions">For each question, choose how often you've experienced it over the <strong>last 2 weeks</strong>:</p>
+
+        <div class="scale-legend">
+          <span>0 — Not at all</span>
+          <span>1 — Several days</span>
+          <span>2 — More than half the days</span>
+          <span>3 — Nearly every day</span>
+        </div>
+
+        <ol class="questions">
+          <li>
+            <label>1. Little interest or pleasure in doing things</label>
+            <div class="options">
+              <label><input type="radio" name="q1" value="0" checked>0</label>
+              <label><input type="radio" name="q1" value="1">1</label>
+              <label><input type="radio" name="q1" value="2">2</label>
+              <label><input type="radio" name="q1" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>2. Feeling down, depressed, or hopeless</label>
+            <div class="options">
+              <label><input type="radio" name="q2" value="0" checked>0</label>
+              <label><input type="radio" name="q2" value="1">1</label>
+              <label><input type="radio" name="q2" value="2">2</label>
+              <label><input type="radio" name="q2" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>3. Trouble falling or staying asleep, or sleeping too much</label>
+            <div class="options">
+              <label><input type="radio" name="q3" value="0" checked>0</label>
+              <label><input type="radio" name="q3" value="1">1</label>
+              <label><input type="radio" name="q3" value="2">2</label>
+              <label><input type="radio" name="q3" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>4. Feeling tired or having little energy</label>
+            <div class="options">
+              <label><input type="radio" name="q4" value="0" checked>0</label>
+              <label><input type="radio" name="q4" value="1">1</label>
+              <label><input type="radio" name="q4" value="2">2</label>
+              <label><input type="radio" name="q4" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>5. Poor appetite or overeating</label>
+            <div class="options">
+              <label><input type="radio" name="q5" value="0" checked>0</label>
+              <label><input type="radio" name="q5" value="1">1</label>
+              <label><input type="radio" name="q5" value="2">2</label>
+              <label><input type="radio" name="q5" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>6. Feeling bad about yourself — or that you are a failure</label>
+            <div class="options">
+              <label><input type="radio" name="q6" value="0" checked>0</label>
+              <label><input type="radio" name="q6" value="1">1</label>
+              <label><input type="radio" name="q6" value="2">2</label>
+              <label><input type="radio" name="q6" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>7. Trouble concentrating on things (reading, watching, working)</label>
+            <div class="options">
+              <label><input type="radio" name="q7" value="0" checked>0</label>
+              <label><input type="radio" name="q7" value="1">1</label>
+              <label><input type="radio" name="q7" value="2">2</label>
+              <label><input type="radio" name="q7" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>8. Moving or speaking so slowly that other people could have noticed — or being restless</label>
+            <div class="options">
+              <label><input type="radio" name="q8" value="0" checked>0</label>
+              <label><input type="radio" name="q8" value="1">1</label>
+              <label><input type="radio" name="q8" value="2">2</label>
+              <label><input type="radio" name="q8" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>9. Feeling overwhelmed by stress or difficulties</label>
+            <div class="options">
+              <label><input type="radio" name="q9" value="0" checked>0</label>
+              <label><input type="radio" name="q9" value="1">1</label>
+              <label><input type="radio" name="q9" value="2">2</label>
+              <label><input type="radio" name="q9" value="3">3</label>
+            </div>
+          </li>
+
+          <li>
+            <label>10. Thoughts that you might be better off dead or of hurting yourself</label>
+            <div class="options">
+              <label><input type="radio" name="q10" value="0" checked>0 — Not at all</label>
+              <label><input type="radio" name="q10" value="1">1 — Several days</label>
+              <label><input type="radio" name="q10" value="2">2 — More than half the days</label>
+              <label><input type="radio" name="q10" value="3">3 — Nearly every day</label>
+            </div>
+          </li>
+        </ol>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <button type="button" id="clear-btn" class="btn ghost">Clear</button>
+        </div>
+      </form>
+
+      <section id="result" class="result hidden" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <small>Anonymous — no personal data is collected. If you feel unsafe, please seek immediate help.</small>
+    </footer>
+  </div>
+
+  <script src="stress.js"></script>
+</body>
+</html>
