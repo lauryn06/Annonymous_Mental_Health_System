@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindful Exercises</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">Mindful Moments</div>
+    <ul>
+      <li><a href="dashoard.html">Home</a></li>
+      <li><a href="exercise.html">Exercises</a></li>
+      <li><a href="#">Journal</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Calm Your Mind</h1>
+    <p>Choose an exercise to begin your journey toward peace.</p>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <h2>Breathing Exercise</h2>
+      <button onclick="startBreathing()">Start</button>
+    </div>
+    <div class="card">
+      <h2>Gratitude Journal</h2>
+      <button onclick="toggleJournal()">Write</button>
+    </div>
+    <div class="card">
+      <h2>Affirmations</h2>
+      <button onclick="showAffirmation()">Show</button>
+    </div>
+  </section>
+
+  <section class="container hidden" id="journal-section">
+    <h2>Gratitude Journal</h2>
+    <form onsubmit="saveEntry(event)">
+      <label for="entry">What are you grateful for today?</label>
+      <input type="text" id="entry" required />
+      <button type="submit">Save Entry</button>
+    </form>
+    <ul id="entries"></ul>
+  </section>
+
+  <section class="container hidden" id="breathing-section">
+    <h2>Breathing Exercise</h2>
+    <p id="breathing-text">Click start to begin.</p>
+  </section>
+
+  <section class="container hidden" id="affirmation-section">
+    <h2>Affirmation</h2>
+    <p id="affirmation-text"></p>
+  </section>
+
+  <script src="exercise.js"></script>
+</body>
+</html>
