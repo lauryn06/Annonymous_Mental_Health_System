@@ -7,6 +7,9 @@
     --button-color: var(--primary-color);
     --button-hover: #574fd6;
 }
+.hidden {
+  display: none;
+}
 
 * {
     box-sizing: border-box;

@@ -12,7 +12,7 @@ const resources = [
     {
         title: "Mindfulness Exercises",
         description: "Simple mindfulness exercises to calm your mind.",
-        link: "#"
+        link: "exercise.html"
     },
     {
         title: "Getting Professional Help",
