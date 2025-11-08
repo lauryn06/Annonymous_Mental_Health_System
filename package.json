@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@clerk/express": "^1.7.46",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0"
   }
 }
